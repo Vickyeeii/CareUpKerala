@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", "sans-serif";
+  --color-background: #FAFAF8;
+  --color-surface: #FFFFFF;
+  --color-primary: #1A1A1A; /* Slightly deeper black */
+  --color-accent: #2A7565; /* Refined muted emerald */
+  --color-muted: #858580; /* Warmer Gray */
+  --color-border: #E8E8E6;
+  --color-error: #D32F2F;
+}
+
+:root {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+@utility glass {
+  @apply bg-white/70 backdrop-blur-lg border border-white/20;
+}
+
+@utility glass-card {
+  @apply bg-white/80 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.04)];
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+    opacity: 0; 
+}
+
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+.delay-500 {
+    animation-delay: 500ms;
+}
